@@ -13,5 +13,5 @@ export default {
     },
     plugins: [ts()],
     preserveModules: true,
-    external: ["react"]
+    external: ["react", "@r0g/react-course-foundation"]
 }
