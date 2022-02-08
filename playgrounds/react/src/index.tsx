@@ -22,14 +22,42 @@ const options = [
     }
 ]
 
+function ListItem({option, getOptionRecommendedProps}) {
+    return (
+        <li {...getOptionRecommendedProps()}>
+            {option.label} ya smelt.
+        </li>
+    )
+}
+
 
 ReactDOM.render(
-    <div>
-        <Select options={options}/>
-        <p>This is some text</p>
+    <div style={{ padding: "1em" }}>
+        <Select
+            options={options}
+            renderOption={ ListItem }
+        />
     </div>,
     document.querySelector("#root")
 )
+
+// ReactDOM.render(
+//     <div style={{ padding: "1em" }}>
+//         <Select
+//             options={options}
+//             renderOption={ ({option, getOptionRecommendedProps}) => {
+//                 return (
+//                     <p {...getOptionRecommendedProps()}>
+//                         {option.label} ya melt.
+//                     </p>
+//                 )
+//             }}
+//         />
+//     </div>,
+//     document.querySelector("#root")
+// )
+
+
 
 // ReactDOM.render(
 //     <div>
