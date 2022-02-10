@@ -35,11 +35,23 @@ ReactDOM.render(
     <div style={{ padding: "1em" }}>
         <Select
             options={options}
-            renderOption={ ListItem }
         />
     </div>,
     document.querySelector("#root")
 )
+
+
+
+
+// ReactDOM.render(
+//     <div style={{ padding: "1em" }}>
+//         <Select
+//             options={options}
+//             renderOption={ ListItem }
+//         />
+//     </div>,
+//     document.querySelector("#root")
+// )
 
 // ReactDOM.render(
 //     <div style={{ padding: "1em" }}>
